@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>เป็นแฟนกันนะ วาริน 💗</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: #ffe6f0;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            padding: 30px;
+            color: #d63384;
+        }
+        h1 {
+            font-size: 2em;
+            margin-top: 50px;
+        }
+        .heart-button {
+            margin-top: 50px;
+            font-size: 1.5em;
+            background-color: #ffb6c1;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .heart-button:hover {
+            background-color: #ff99aa;
+        }
+        #content {
+            display: none;
+            margin-top: 30px;
+        }
+        .cinnamoroll {
+            width: 150px;
+            margin: 20px auto;
+            display: block;
+        }
+        .final-message {
+            font-size: 1.2em;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>แตะเพื่อเปิด 💖</h1>
+    <button class="heart-button" onclick="showMessage()">เปิดดูเลย</button>
+
+    <div id="content">
+        <img src="https://media.tenor.com/XKzjATKqCncAAAAi/cinnamoroll-love.gif" class="cinnamoroll" alt="Cinnamoroll">
+        <p>ตั้งแต่เราคุยกัน หนูทำให้พี่ยิ้มมากขึ้นทุกวันเลย 💗</p>
+        <p>พี่มีความสุขมากๆ เลยนะ ตั้งแต่มาเจอหนู</p>
+        <p>หนูทำให้พี่อยากกลับมามีความรักอีกครั้ง</p>
+        <h2>สุดท้ายนี้... เป็นแฟนกันนะ 💍</h2>
+        <button class="heart-button" onclick="showFinalMessage()">ตกลง</button>
+        <button class="heart-button" onclick="showFinalMessage()">ตกลง</button>
+    </div>
+
+    <div class="final-message" id="finalMessage" style="display: none;">
+        เย้ พี่ดีใจที่สุดเลย 💕 พี่รักหนูนะ จะดูแลให้ดีที่สุดเลย 💖
+    </div>
+
+    <audio autoplay loop>
+        <source src="https://cdn.pixabay.com/download/audio/2022/10/26/audio_f3c0b3764e.mp3?filename=romantic-love-ambient-background-music-124253.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+        function showMessage() {
+            document.querySelector('.heart-button').style.display = 'none';
+            document.querySelector('h1').style.display = 'none';
+            document.getElementById('content').style.display = 'block';
+        }
+        function showFinalMessage() {
+            document.getElementById('finalMessage').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
